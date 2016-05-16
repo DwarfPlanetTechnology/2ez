@@ -1,0 +1,44 @@
+<html>
+<h1>The 2ez API</h1>
+<h3>What?</h3>
+<p>
+The 2ez API can be used to make your own apps and websites that integrate with 2ez. All of 2ez'z services are included in the API and are available for free. If you do use it be sure to let us know and we might feature your app or site on our main page!
+</p>
+<h3>How?</h3>
+<p>This API is fairly easy to use. There are only a few steps needed to establish a connection with the 2ez Heart API</p>
+<pre>1. Send, via POST, the username and password to http://2ez.com/api/auth.php
+2. Receive the JSON data
+   If successful:
+   {
+     "success":true,
+     "token":"1234567890abcdefghijklmnopqrstuvwxyzToken"
+   }
+   If not successful:
+   {
+     "success":false
+   }
+3. POST the token to any of the APIs</pre>
+<h4>Heart</h4>
+<pre>Get the bookmarks:
+   POST the token to http://2ez.com/api/heart/getbookmarks.php
+   You will receive JSON that looks like this:
+      {
+        "success":true,
+	"bookmarks":[
+          {
+	    "name":"2ez",
+	    "url":"http://2ez.com"
+	  },
+	  {
+	    "name":"2ez API",
+	    "url":"http://2ez.com/#api"
+	  }
+	]
+      }
+Add a bookmark:
+   POST the token, the name of the site, and the url to
+   http://2ez.com/api/heart/addbookmark.php
+Remove a bookmark:
+   POST the token, the name of the site, and the url to
+   http://2ez.com/api/heart/rmbookmark.php</pre>
+</html>

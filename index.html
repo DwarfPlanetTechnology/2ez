@@ -1,5 +1,28 @@
 <html>
 	<head>
-		<title>
+		<title>2ez</title>
+		<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js'></script>
+		<script src='http://cdn.ractivejs.org/latest/ractive.js'></script>
+		<link rel='stylesheet' type='text/css' href='css/style.css' />
+		<link rel='icon' type='image/png' href='icon-web.png'>
 	</head>
+	<body>
+		<ul class="navbar">
+			<li><a href='#2ez'>HOME</a></li>
+			<ul style="float: right;">
+				<div id="signreg" style="display: inline;">
+					<li><a href="#signin">Sign In</a></li>
+					<li><a href="#register">Register</a></li>
+				</div>
+				<div id="profout" style="display: none;">
+					<li><a href="#user">Profile</a></li>
+				</div>
+			</ul>
+		</ul>
+		<div style="height: 3em;"></div>
+		<noscript>You need JavaScript</noscript>
+		<div id='container'></div>
+	</body>
+	<script src="js/router.js"></script>
+	<script src="js/url-hash.js"></script>
 </html>
